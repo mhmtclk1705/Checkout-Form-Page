@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8c29faa18e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Checkout</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      label{
+        font-size: 0.8rem;
+      }
+      h1 {
+        text-align: center;
+      }
+      .checkout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 950px;
+        height: 690px;
+      }
+      .product-img {
+        height: 110px;
+        width: 96px;
+        border-radius: 10px;
+      }
+      .checkout--product {
+        background-color: #eeeeee;
+        width: 320px;
+        height: 365px;
+        border-radius: 10px;
+        padding: 20px;
+        position: relative;
+        top: -90px;
+      }
+      .checkout--product__product1,
+      .checkout--product__product2 {
+        display: flex;
+        flex-direction: row;
+      }
+      .checkout--form__information,
+      .checkout--form__adress {
+        line-height: 2rem;
+        margin: 0 40px 0 0;
+      }
+      .checkout--form__information input,
+      .checkout--form__adress input {
+        width: 372px;
+        height: 16px;
+        border-radius: 5px;
+        padding: 8px 5px 8px 35px;
+        border: 0.5px solid rgba(0, 0, 0, 0.5);
+      }
+      .checkout--form i {
+        position: relative;
+        right: 406px;
+        opacity: 0.5;
+      }
+      #remember {
+        width: auto;
+      }
+      .checkout--product__product1info,
+      .checkout--product__product2info {
+        margin-left: 15px;
+        position: relative;
+        bottom: 20px;
+      }
+     
+      .checkout--form__country select {
+        width: 119px;
+        height: 35px;
+        border-radius: 5px;
+        border-color: rgba(0, 0, 0, 0.5);
+        padding-left: 40px;
+      }
+      .checkout--form__country input,.checkout--form__postalcode input {
+        width: 216px;
+        height: 16px;
+        border-radius: 5px;
+        border-color: rgba(0, 0, 0, 0.5);
+      }
+      .checkout--form__postalcode i{
+        position: relative;
+        left: -250px;
+        opacity: 0.5;
+
+      }
+      .checkout--form__country i{
+        position: relative;
+        left: -110px;
+        opacity: 0.5;
+
+      }
+      .checkout--form__footer{
+        display: flex;
+        margin-top: 20px;
+      }
+      .checkout--form__remember{
+        margin-top: 10px;
+      }
+      .checkout--form__remember button {
+        padding: 14px;
+        border-radius: 10px;
+        background-color: #F2994A;
+        border: none;
+        color: white;
+        position: relative;
+        left: 330px;
+      }
+     
+      h3{
+        margin-bottom: 0px;
+      }
+      .checkout--product__price p{
+        word-spacing: 210px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      .checkout--product span {
+        font-weight: 700;
+        color: #F2994A;
+        font-size: 1rem;
+      }
+      .checkout--product p{
+        /* font-size: 0.8rem; */
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <div class="checkout">
+      <div class="checkout--form">
+        <form action="">
+          <div class="checkout--form__information">
+            <h3>Contact information</h3>
+            <label for="">Email</label><br />
+            <input
+              type="email"
+              name="mail"
+              id="mail"
+              placeholder="Enter your email..."
+            /><i class="fas fa-envelope"></i><br />
+            <label for="">Phone</label><br />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone..."
+            /><i class="fas fa-phone-alt"></i><br />
+          </div>
+          <div class="checkout--form__adress">
+            <h3>Shipping address</h3>
+            <label for="">Full name</label><br />
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              placeholder="Enter your Full name..."
+            /><i class="fas fa-user"></i><br />
+            <label for="">Address</label><br />
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Enter your address..."
+            /><i class="fas fa-home"></i><br />
+            <label for="">City</label><br />
+            <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder="Enter your city..."
+            /><i class="fas fa-city"></i><br />
+            <div class="checkout--form__footer">
+            <div class="checkout--form__country">
+              <label for="">Country</label><br />
+              <select name="country" id="country">
+                <option value="turkey">Turkey</option>
+                <option value="usa">USA</option>
+                <option value="england">England</option></select
+              ><i class="fas fa-globe-europe"></i>
+            </div>
+              <div class="checkout--form__postalcode">
+              <label for="">Post Code</label><br />
+              <input type="text" placeholder="Enter your postal code..." /><i
+                class="fas fa-mail-bulk"
+              ></i
+              ><br />
+            </div>
+          </div>
+            <div class="checkout--form__remember">
+              <input type="checkbox" name="remember" id="remember" />
+              <label id="remember" for="remember"
+                >See this information next time</label
+              ><br />
+              <button>Continue</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="checkout--product">
+        <div class="checkout--product__product1">
+          <img class="product-img" src="img/photo1.png" alt="Vintage Backbag" />
+          <div class="checkout--product__product1info">
+            <h4>Vintage Backbag</h4>
+            <p><span>$54.99 </span><del>$94.99</del></p>
+            <img src="img/1.png" alt="" />
+          </div>
+        </div>
+        <div class="checkout--product__product2">
+          <img class="product-img" src="img/photo2.png" alt="Vintage Backbag" />
+          <div class="checkout--product__product2info">
+            <h4>Levi Shoes</h4>
+            <p><span>$74.99 </span><del>$124.99</del></p>
+            <img src="img/1.png" alt="" />
+          </div>
+        </div>
+        <div class="checkout--product__price">
+          <p>Shipping $19</p>
+          <p>Total $149.98</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
